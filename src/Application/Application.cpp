@@ -66,8 +66,8 @@ void Application::run()
     while (!mQuit)
     {
         handleEvents();
-        update();
         render();
+        SDL_GL_SwapWindow(mWindow);
     }
 }
 
@@ -96,7 +96,7 @@ void Application::handleEvents()
         {
             if (mDrawing)
             {
-                std::cout << "paint now" << std::endl;
+                //std::cout << "paint now" << std::endl;
                 mPoints.push_back({static_cast<float>(e.motion.x), static_cast<float>(e.motion.y)});
             }
         }
@@ -111,5 +111,4 @@ void Application::update()
 void Application::render()
 {
     Renderer::render(mPoints);
-    SDL_GL_SwapWindow(mWindow);
 }

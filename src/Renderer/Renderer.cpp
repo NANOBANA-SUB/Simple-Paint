@@ -24,11 +24,12 @@ void Renderer::render(const std::vector<Point>& points)
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glColor3f(0.0f, 1.0f, 1.0f);
+    glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_LINE_STRIP);
 
     for (const auto& point : points)
     {
+        std::cout << "point:" << point.x << "," << point.y << std::endl;
         glVertex2f(point.x, point.y);
     }
     glEnd();
