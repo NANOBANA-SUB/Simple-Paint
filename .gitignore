@@ -1,0 +1,65 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Compiled object files
+*.o
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+
+# Debug files
+*.dSYM/
+*.cproject
+*.project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# SDL specific
+sdl-build/
+sdl-debug/
+
+# Build directory
+/build/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Autotools
+aclocal.m4
+autom4te.cache/
+compile
+config.log
+config.status
+configure
+depcomp
+install-sh
+missing
+libtool
+
+# Code coverage
+*.gcda
+*.gcno
+*.gcov
+
+# Logs
+*.log
+
+# Other
+*.tmp
