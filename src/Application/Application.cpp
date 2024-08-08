@@ -96,6 +96,7 @@ void Application::handleEvents()
         {
             if (mDrawing)
             {
+                std::cout << "paint now" << std::endl;
                 mPoints.push_back({static_cast<float>(e.motion.x), static_cast<float>(e.motion.y)});
             }
         }
