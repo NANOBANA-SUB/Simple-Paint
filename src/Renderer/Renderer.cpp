@@ -29,8 +29,14 @@ void Renderer::render(const std::vector<Point>& points)
 
     for (const auto& point : points)
     {
-        std::cout << "point:" << point.x << "," << point.y << std::endl;
         glVertex2f(point.x, point.y);
     }
     glEnd();
+
+    GLenum err;
+    while ((err = glGetError()) != GL_NO_ERROR)
+    {
+        std::cerr << "OpenGL error: " << err << std::endl;
+    }
 }
+

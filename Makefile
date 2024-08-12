@@ -1,7 +1,7 @@
 # コンパイラとフラグの設定
 CC = gcc
 CFLAGS = -I./include -I./src
-LDFLAGS = -L./lib -lmingw32 -lSDL2main -lSDL2 -mconsole -lglew32 -lopengl32 -lstdc++
+LDFLAGS = -L./lib -lmingw32 -lSDL2main -lSDL2 -mconsole -lglew32 -lopengl32 -lglu32 -lstdc++ -o simple_paint
 
 # ソースファイル
 SRC_DIR = src
