@@ -12,31 +12,22 @@ void Renderer::initOpenGL()
         exit(1);
     }
 
-    glViewport(0, 0, 800, 600);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(0.0, 800.0, 600.0, 0.0, -1.0, 1.0);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
+    glViewport(0, 0, 1280, 720);
 }
 
 void Renderer::render(const std::vector<Point>& points)
 {
-    glClear(GL_COLOR_BUFFER_BIT);
+    // バッファのクリア
+        glClear(GL_COLOR_BUFFER_BIT);
 
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glBegin(GL_LINE_STRIP);
-
-    for (const auto& point : points)
-    {
-        glVertex2f(point.x, point.y);
-    }
-    glEnd();
-
-    GLenum err;
-    while ((err = glGetError()) != GL_NO_ERROR)
-    {
-        std::cerr << "OpenGL error: " << err << std::endl;
-    }
+        // 三角形の描画
+        glBegin(GL_TRIANGLES);
+            glColor3f(1.0f, 0.0f, 0.0f); // 赤色
+            glVertex2f(-0.5f, -0.5f); // 左下
+            glColor3f(0.0f, 1.0f, 0.0f); // 緑色
+            glVertex2f(0.5f, -0.5f);  // 右下
+            glColor3f(0.0f, 0.0f, 1.0f); // 青色
+            glVertex2f(0.0f, 1.0f);   // 上
+        glEnd();
 }
 

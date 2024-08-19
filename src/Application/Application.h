@@ -17,6 +17,7 @@ private:
     void handleEvents();
     void update();
     void render();
+    Point convertToOpenGLCoords(int x, int y);
 
     SDL_Window* mWindow;
     SDL_GLContext mglContext;
