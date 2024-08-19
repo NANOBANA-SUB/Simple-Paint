@@ -6,6 +6,8 @@
 
 class Renderer
 {
+private:
+    static void checkOpenGLError();
 public:
     static void initOpenGL();
     static void render(const std::vector<Point>& points);
